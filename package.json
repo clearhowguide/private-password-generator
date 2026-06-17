@@ -1,0 +1,18 @@
+{
+  "name": "private-password-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Privacy-first password generator used by ClearHowGuide.",
+  "type": "module",
+  "scripts": {
+    "source:check": "test -f src/PasswordGenerator.astro",
+    "privacy:check": "node scripts/privacy-check.mjs",
+    "check": "npm run source:check && npm run privacy:check"
+  },
+  "dependencies": {
+    "@zxcvbn-ts/core": "^3.0.4",
+    "@zxcvbn-ts/language-common": "^3.0.4",
+    "@zxcvbn-ts/language-en": "^3.0.2"
+  },
+  "devDependencies": {}
+}
